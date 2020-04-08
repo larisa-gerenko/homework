@@ -1,0 +1,44 @@
+body {
+  background-image: url(pictures/sea.jpeg);
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  background-attachment: fixed;
+}
+.menu li {
+  text-transform: uppercase;
+  color: blueviolet;
+  list-style: none;
+  display: inline;
+}
+
+.form {
+  margin-left: 50px;
+  margin-top: 50px;
+  width: 500px;
+}
+.form * {
+  box-sizing: border-box;
+}
+.form div {
+  margin-bottom: 10px;
+}
+.form h2 {
+  font-size: 18px;
+  color: #0b1014;
+  text-transform: uppercase;
+  font-family: "Open Sans", sans-serif;
+}
+.form input[type="text"] {
+  width: 100%;
+  height: 30px;
+  border-radius: 5px;
+}
+.form select {
+  width: 500px;
+  height: 30px;
+}
+.form textarea {
+  width: 500px;
+  height: 30px;
+  border-radius: 5px;
+}

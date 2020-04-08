@@ -1,0 +1,50 @@
+body {
+  background-image: url(pictures/sea.jpeg);
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  background-attachment: fixed;
+}
+.menu li {
+  text-transform: uppercase;
+  color: blueviolet;
+  list-style: none;
+  display: inline;
+}
+.fish {
+  width: 500px;
+  height: 600px;
+}
+.fish img {
+  box-sizing: border-box;
+  max-width: 100%;
+  border: 10px solid white;
+}
+.fish h2 {
+  text-align: center;
+  font-size: 26px;
+  font-family: "Open Sans", sans-serif;
+  color: #0b1014;
+  text-transform: uppercase;
+}
+.fish .autor {
+  margin-bottom: 10px;
+  text-align: center;
+  font-size: 16px;
+  font-family: "Open Sans", sans-serif;
+  color: #0b1014;
+}
+.fish .description {
+  font-size: 15px;
+  font-family: "Open Sans", sans-serif;
+  color: #0b1014;
+}
+button {
+  background-color: #4a7fc3;
+  border: none;
+  color: white;
+  padding: 13px 23 px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  font-family: "Open Sans", sans-serif;
+}

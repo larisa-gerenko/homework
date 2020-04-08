@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="opros.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="menu">
+      <ul>
+        <li>
+          <a href="index.html">main</a>
+        </li>
+        <li>
+          <a href="second.html">second</a>
+        </li>
+        <li>
+          <a href="third.html"> third</a>
+        </li>
+        <li>
+          <a href="auto.html"> Авторизация</a>
+        </li>
+        <li>
+          <a href="reg.html"> Регистрация</a>
+        </li>
+        <li>
+          <a href="opros.html"> Опрос</a>
+        </li>
+        <li>
+          <a href="blog.html"> Статьи</a>
+        </li>
+      </ul>
+    </div>
+    <form class="form">
+      <h2>Заполните форму заявки</h2>
+      <div><input type="text" required placeholder="Ваши Ф.И.О." /></div>
+      <div><input type="text" required placeholder="Контактный телефон" /></div>
+      <div><input type="text" required placeholder="Email" /></div>
+      <div>
+        <select required>
+          <option>Выберите форму</option>
+          <option>Прямоугольник</option>
+          <option>Шар</option>
+          <option>Цилиндр</option>
+          <option>Куб</option>
+          <option>Панорама</option>
+          <option>Треугольник</option>
+          <option>Арка</option>
+        </select>
+      </div>
+      <div>
+        <select required>
+          <option>Выберите тип</option>
+          <option>Морской-для рыб</option>
+          <option>Морской-для медуз</option>
+          <option>Морской-для мурен</option>
+          <option>Пресноводный-для рыб</option>
+          <option>Пресноводный-для креветок</option>
+          <option>Пресноводный-аква-террариум</option>
+          <option>Пресноводный-голландского типа</option>
+        </select>
+      </div>
+
+      <div>
+        Крышка
+        <label><input name="cap" type="radio" required checked />Нужна</label>
+        <label><input name="cap" type="radio" required />Не нужна</label>
+      </div>
+      <div>
+        <textarea placeholder="Дополнительные пожелания"></textarea>
+      </div>
+      <div>
+        <input type="reset" value="Очистить" />
+
+        <input type="submit" />
+      </div>
+    </form>
+  </body>
+</html>
