@@ -26,13 +26,21 @@ body {
   color: #0b1014;
   text-transform: uppercase;
 }
-.fish .autor {
+.fish .author {
   margin-bottom: 10px;
-  text-align: center;
+
   font-size: 16px;
   font-family: "Open Sans", sans-serif;
   color: #0b1014;
 }
+.fish .author a {
+  color: #580808;
+}
+
+.fish .date {
+  float: right;
+}
+
 .fish .description {
   font-size: 15px;
   font-family: "Open Sans", sans-serif;
