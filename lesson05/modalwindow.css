@@ -1,0 +1,62 @@
+.menu {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 3px;
+}
+.menu li {
+  list-style: none;
+  display: inline-block;
+  text-transform: uppercase;
+}
+.menu li a {
+  display: block;
+  text-decoration: none;
+  border: 1px solid #3d78c3;
+  padding: 5px;
+  border-radius: 3px;
+  background: #fff;
+  color: #3d78c3;
+}
+.window {
+  padding: 20px;
+  display: none;
+  width: 800px;
+  border: 1px solid #3d78c3;
+  border-radius: 3px;
+}
+
+#callback {
+  padding: 50px;
+  width: 300px;
+  height: 100px;
+  background: #ffd0ce;
+  display: none;
+  border: 1px solid #3d78c3;
+  border-radius: 3px;
+}
+#we {
+  background: #d8efe7;
+}
+#price {
+  background: #ffecb4;
+}
+#delivery {
+  background: #e7e4ff;
+}
+#we:target,
+#price:target,
+#delivery:target {
+  display: block;
+}
+#callback:target {
+  display: block;
+  position: absolute;
+  top: 200px;
+  left: 700px;
+  bottom: 200px;
+  right: 200px;
+}
+#callback input {
+  padding: 5px;
+  font-size: 1.1em;
+}
