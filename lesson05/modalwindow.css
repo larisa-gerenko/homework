@@ -25,15 +25,6 @@
   border-radius: 3px;
 }
 
-#callback {
-  padding: 50px;
-  width: 300px;
-  height: 100px;
-  background: #ffd0ce;
-  display: none;
-  border: 1px solid #3d78c3;
-  border-radius: 3px;
-}
 #we {
   background: #d8efe7;
 }
@@ -45,18 +36,32 @@
 }
 #we:target,
 #price:target,
-#delivery:target {
-  display: block;
-}
+#delivery:target,
 #callback:target {
   display: block;
+}
+.bkg {
+  display: none;
+  background: rgba(0, 0, 0, 0.2);
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+}
+.form {
+  padding: 50px;
+  width: 300px;
+  height: 100px;
+  background: #ffd0ce;
+  border: 1px solid #3d78c3;
+  border-radius: 3px;
   position: absolute;
   top: 200px;
-  left: 700px;
-  bottom: 200px;
-  right: 200px;
+  left: 500px;
 }
-#callback input {
+
+form input {
   padding: 5px;
   font-size: 1.1em;
 }
