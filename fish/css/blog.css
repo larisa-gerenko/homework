@@ -1,0 +1,130 @@
+* {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  text-decoration: none;
+}
+body {
+  display: grid;
+  grid-template-areas:
+    "header header header"
+    "fish__predator fish__cihlids fish__viviparous"
+    "fish__catfish . .";
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto auto auto;
+}
+header {
+  grid-area: header;
+}
+.fish__predator {
+  grid-area: fish__predator;
+}
+.fish__cihlids {
+  grid-area: fish__cihlids;
+}
+.fish__viviparous {
+  grid-area: fish__viviparous;
+}
+.fish__catfish {
+  grid-area: fish__catfish;
+}
+
+header {
+  display: grid;
+  grid-template-columns: minmax(50px, 200px) auto 1fr;
+  gap: 300px;
+  background: black;
+
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  height: 120px;
+}
+
+header a img {
+  width: 100%;
+  height: auto;
+}
+header ul {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 50px;
+  height: 100%;
+}
+header li {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+}
+
+header a {
+  font-family: Montserrat, sans-serif;
+  font-weight: 500;
+  color: white;
+}
+header a:hover {
+  color: #2ba2b0;
+}
+header form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header form input {
+  opacity: 0;
+  width: 300px;
+}
+header form input:focus {
+  opacity: 1;
+}
+#search + label {
+  color: white;
+  margin-left: 20px;
+}
+.fish {
+  width: 500px;
+  height: 600px;
+}
+.fish img {
+  box-sizing: border-box;
+  max-width: 100%;
+  border: 10px solid white;
+}
+.fish h2 {
+  text-align: center;
+  font-size: 26px;
+  font-family: "Open Sans", sans-serif;
+  color: #0b1014;
+  text-transform: uppercase;
+}
+.fish .author {
+  margin-bottom: 10px;
+
+  font-size: 16px;
+  font-family: "Open Sans", sans-serif;
+  color: #0b1014;
+}
+.fish .author a {
+  color: #580808;
+}
+
+.fish .date {
+  float: right;
+}
+
+.fish .description {
+  font-size: 15px;
+  font-family: "Open Sans", sans-serif;
+  color: #0b1014;
+}
+button {
+  background-color: #4a7fc3;
+  border: none;
+  color: white;
+  padding: 13px 23 px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  font-family: "Open Sans", sans-serif;
+}

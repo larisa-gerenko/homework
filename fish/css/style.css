@@ -1,0 +1,361 @@
+* {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  text-decoration: none;
+}
+body {
+  display: grid;
+  grid-template-areas:
+    "header header header"
+    "slider slider slider"
+    "article article article"
+    "video video video"
+    "main main main"
+    "footer footer footer";
+  grid-template-columns: auto auto auto;
+  grid-template-rows: auto auto auto 400px auto;
+  font-family: Montserrat, sans-serif;
+}
+header {
+  grid-area: header;
+}
+.slider {
+  grid-area: slider;
+}
+main {
+  grid-area: main;
+}
+.video {
+  grid-area: video;
+}
+article {
+  grid-area: article;
+}
+footer {
+  grid-area: footer;
+}
+
+header {
+  display: grid;
+  grid-template-columns: 200px auto 1fr;
+  gap: 300px;
+  background: black;
+  z-index: 1;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  height: 120px;
+}
+
+header a img {
+  width: 100%;
+  height: auto;
+}
+header ul {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 50px;
+  height: 100%;
+}
+header li {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+}
+
+header a {
+  font-weight: 500;
+  color: white;
+}
+header a:hover {
+  color: #2ba2b0;
+}
+header form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header form input {
+  opacity: 0;
+  width: 300px;
+}
+header form input:focus {
+  opacity: 1;
+}
+#search + label {
+  color: white;
+  margin-left: 20px;
+}
+/* Стили для слайдера */
+
+.slider {
+  overflow: hidden;
+}
+.slider li {
+  display: none;
+}
+.slider li.active {
+  display: block;
+  position: relative;
+}
+.slider .slide-image {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  height: 100vh;
+}
+.slider .active .slide-image {
+  animation: image 15s linear infinite;
+}
+@keyframes image {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.2);
+  }
+}
+/* Стили для текста на слайдере */
+
+.slider .active .text {
+  position: absolute;
+  right: 30px;
+  top: 40%;
+  color: #fff;
+}
+.slider .active .text span {
+  font-size: 100px;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+.slider .active .text .advert {
+  font-size: 30px;
+  font-weight: 300;
+  text-transform: uppercase;
+  padding: 10px 0 20px 60px;
+}
+.slider .active .text .button-container {
+  text-align: center;
+}
+.slider .active .text .button {
+  display: inline-block;
+  background-color: #2aa2b0;
+  color: white;
+  padding: 10px;
+  margin-top: 10px;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 700;
+}
+/* Стили для блога */
+
+article {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto auto;
+  grid-template-areas:
+    "h2 h2 h2"
+    "article-one article-two article-three";
+  gap: 30px;
+  margin: 100px 180px;
+}
+article h2 {
+  margin-bottom: 60px;
+  font-size: 50px;
+  text-align: center;
+
+  font-weight: 700;
+  font-style: normal;
+}
+.article img {
+  max-width: 100%;
+  height: auto;
+}
+.article .date {
+  margin-top: 10px;
+
+  text-align: center;
+  color: #2aa2b0;
+}
+.article h3 {
+  margin-top: 10px;
+  color: #403535;
+
+  text-align: center;
+  font-size: 25px;
+}
+.article .description {
+  margin-top: 10px;
+  color: #8c8686;
+
+  text-align: center;
+  font-size: 15px;
+  font-weight: 400;
+}
+.article .article__center {
+  text-align: center;
+}
+.article .button {
+  display: inline-block;
+  background-color: #2aa2b0;
+  color: white;
+  padding: 10px;
+  margin-top: 10px;
+  text-align: center;
+
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 700;
+}
+article h2 {
+  grid-area: h2;
+}
+.article-one {
+  grid-area: article-one;
+}
+.article-two {
+  grid-area: article-two;
+}
+.article-three {
+  grid-area: article-three;
+}
+/* Стили для видео */
+.video {
+  overflow: hidden;
+}
+.video video {
+  width: 100%;
+}
+/* Стили для главной части */
+main {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-template-rows: auto auto auto auto auto;
+  grid-template-areas:
+    "AquaticPets AquaticPets AquaticPets AquaticPets"
+    "CrownTaleFish description__CrownTaleFish  DeltaFish description__DeltaFish"
+    ". FlowerTaleFish description__FlowerTaleFish ."
+    ". . HalfMoonFish description__HalfMoonFish "
+    "description__SiameseFish SiameseFish description__VailThaiFish VailThaiFish";
+
+  width: 1500px;
+  margin: 30px auto 0px;
+}
+
+main h2 {
+  grid-area: AquaticPets;
+}
+main .CrownTaleFish {
+  grid-area: CrownTaleFish;
+}
+main .DeltaFish {
+  grid-area: DeltaFish;
+}
+main .FlowerTaleFish {
+  grid-area: FlowerTaleFish;
+}
+main .HalfMoonFish {
+  grid-area: HalfMoonFish;
+}
+main .SiameseFish {
+  grid-area: SiameseFish;
+}
+main .VailThaiFish {
+  grid-area: VailThaiFish;
+}
+p.description__CrownTaleFish {
+  grid-area: description__CrownTaleFish;
+}
+p.description__DeltaFish {
+  grid-area: description__DeltaFish;
+}
+p.description__FlowerTaleFish {
+  grid-area: description__FlowerTaleFish;
+}
+p.description__HalfMoonFish {
+  grid-area: description__HalfMoonFish;
+}
+p.description__SiameseFish {
+  grid-area: description__SiameseFish;
+}
+p.description__VailThaiFish {
+  grid-area: description__VailThaiFish;
+}
+
+main h2 {
+  margin-bottom: 60px;
+  font-size: 50px;
+  text-align: center;
+
+  font-weight: 700;
+  font-style: normal;
+}
+main img {
+  box-sizing: border-box;
+  width: 100%;
+  height: auto;
+  border: 2px solid #e8f6f7;
+}
+main .description {
+  box-sizing: border-box;
+  padding: 50px;
+  padding-top: 90px;
+  font-size: 23px;
+  color: #8c8686;
+  width: 100%;
+  height: auto;
+  text-align: left;
+}
+/* Стили для футера */
+footer {
+  background-color: black;
+  margin-top: 50px;
+}
+.footer .map {
+  padding: 30px 0;
+}
+footer .footer {
+  display: flex;
+  margin-right: 200px;
+  margin-left: 200px;
+  justify-content: space-around;
+  align-items: center;
+}
+footer .about {
+  width: 500px;
+}
+footer .about h3 {
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 23px;
+  margin-bottom: 20px;
+}
+footer .about p {
+  width: 300px;
+  color: #8c8686;
+  font-size: 14 px;
+  font-weight: normal;
+  margin-bottom: 30px;
+}
+
+.footer .social a {
+  text-align: center;
+  line-height: 30px;
+  vertical-align: middle;
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  color: #8c8686;
+  border: 2px solid;
+}
+.footer .social a:hover {
+  color: #2ba2b0;
+}
+@media screen and (max-width: 1560px) {
+  header {
+    gap: 200px;
+  }
+}
